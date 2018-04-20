@@ -68,7 +68,9 @@ h3.title-advertising {
 header {
   width: 100%;
   min-height: 800px;
-  background: url("../images/header-bg.jpg") no-repeat; }
+  background: url("../images/header-bg.jpg") no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover; }
   header .top-menu {
     display: -webkit-box;
     display: -webkit-flex;
@@ -78,7 +80,7 @@ header {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 0 16px 20px 16px; }
+    padding-bottom: 0; }
     header .top-menu .navbar-brand {
       padding: 0;
       padding-top: 20px; }
@@ -251,46 +253,48 @@ header {
         header .header-content .features .features-item:last-child {
           margin-bottom: 0; }
 
+.indicators {
+  margin: 40px auto;
+  width: 150px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .indicators .arrow-prev, .indicators .arrow-next {
+    display: block;
+    font-size: 13px;
+    color: #bdbdbd;
+    margin: 0 20px; }
+    .indicators .arrow-prev:hover, .indicators .arrow-next:hover {
+      color: #ee8916; }
+  .indicators .svg {
+    margin: 0;
+    margin-right: 5px; }
+  .indicators circle {
+    display: block;
+    width: 11px;
+    height: 11px;
+    fill: white;
+    stroke: #bdbdbd;
+    stroke-width: 2; }
+    .indicators circle:hover {
+      color: #ee8916;
+      fill: #ee8916;
+      stroke: #ee8916; }
+
+.mouse {
+  display: block;
+  margin: 0 auto;
+  padding-left: 15px; }
+
 .privilege {
   background: url("../images/privilege-bg.jpg") no-repeat;
   min-height: 1135px;
   padding-bottom: 80px; }
-  .privilege .indicators {
-    margin: 40px auto;
-    width: 150px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    .privilege .indicators .arrow-prev, .privilege .indicators .arrow-next {
-      display: block;
-      font-size: 13px;
-      color: #bdbdbd;
-      margin: 0 20px; }
-      .privilege .indicators .arrow-prev:hover, .privilege .indicators .arrow-next:hover {
-        color: #ee8916; }
-    .privilege .indicators .svg {
-      margin: 0;
-      margin-right: 5px; }
-    .privilege .indicators circle {
-      display: block;
-      width: 11px;
-      height: 11px;
-      fill: white;
-      stroke: #bdbdbd;
-      stroke-width: 2; }
-      .privilege .indicators circle:hover {
-        color: #ee8916;
-        fill: #ee8916;
-        stroke: #ee8916; }
-  .privilege .mouse {
-    display: block;
-    margin: 0 auto;
-    padding-left: 15px; }
   .privilege .privilege-view {
     margin-bottom: 110px;
     display: -webkit-box;
@@ -758,3 +762,117 @@ footer {
         background: url("../images/disainer.png") no-repeat;
         opacity: 0.1;
         padding-bottom: 10px; }
+
+@media screen and (max-width: 640px) {
+  .icons, .icons-right {
+    margin-top: 25px; }
+  .icons-right {
+    -webkit-box-pack: start !important;
+    -webkit-justify-content: flex-start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important; }
+  .btn-orange {
+    font-size: 10px;
+    color: #fff;
+    background: #ec7e01;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    -webkit-border-radius: 18px;
+            border-radius: 18px; }
+  header {
+    max-width: 100%;
+    min-height: 480px;
+    background: url("../images/header-bg.jpg") no-repeat;
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-position: center center;
+    margin-top: 50px; }
+    header .xs-bg {
+      background: #202020;
+      position: fixed;
+      top: 0;
+      z-index: 200; }
+    header .top-menu {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      padding-bottom: 0; }
+      header .top-menu .navbar-brand {
+        padding: 0; }
+      header .top-menu .d-xs-flex {
+        display: -webkit-box !important;
+        display: -webkit-flex !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        padding: 5px 0;
+        font-family: 'HelveticaNeueCyr-Roman';
+        font-size: 10px;
+        color: #fff; }
+        header .top-menu .d-xs-flex .contact-item {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          line-height: 16px; }
+          header .top-menu .d-xs-flex .contact-item div {
+            font-family: 'HelveticaNeueCyr-Roman';
+            font-size: 10px; }
+          header .top-menu .d-xs-flex .contact-item img {
+            display: block;
+            margin-right: 10px; }
+        header .top-menu .d-xs-flex .mail-block {
+          width: auto;
+          margin-right: 0; }
+        header .top-menu .d-xs-flex .phone-block {
+          width: auto;
+          margin-right: 20px; }
+      header .top-menu .main-menu {
+        padding: 5px; }
+        header .top-menu .main-menu .nav-link {
+          font-size: 10px; }
+    header .menu-line {
+      display: none; }
+    header .header-content {
+      margin-top: 0;
+      padding-top: 135px; }
+      header .header-content .company-name {
+        font-size: 11px; }
+      header .header-content .content-title {
+        font-size: 13px;
+        line-height: 18px;
+        text-transform: uppercase; }
+        header .header-content .content-title .bold {
+          font-size: 16px;
+          line-height: 26px; }
+      header .header-content .line-underline {
+        width: 50px;
+        margin-top: 16px;
+        margin-bottom: 12px; }
+      header .header-content .features {
+        list-style: disc;
+        color: #fff;
+        padding-left: 19px;
+        margin-bottom: 60px; }
+        header .header-content .features .features-item {
+          font-family: 'HelveticaNeueCyr-Roman';
+          font-size: 10pt;
+          color: #fff;
+          font-weight: 200;
+          margin-bottom: 12px; }
+          header .header-content .features .features-item:last-child {
+            margin-bottom: 0; }
+  .mouse {
+    display: none; }
+  .indicators {
+    margin: 0 auto;
+    position: relative;
+    top: -38px; } }

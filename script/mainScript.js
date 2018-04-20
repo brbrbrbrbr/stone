@@ -29,7 +29,7 @@ new Vue({
         selectSlide: function (i) {
             this.current = i;
             this.resetPlay();
-        }
+        },
         resetPlay: function () {
             clearInterval(this.timer);
             this.play();

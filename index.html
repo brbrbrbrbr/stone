@@ -168,6 +168,22 @@
 
 		</div>
 	</header>
+		<div id="carusel">
+			<div class="slider">
+				<ul class="slides">
+					<li v-for="(slide, i) in slides">
+						<img :src="slide" alt="">
+					</li>
+				</ul>
+				<ul class="bullets">
+					<li v-for="(slide,i) in slides" @click="selectSlide(i)" v-html="i==current ? '&#9679;' : '&omicron;'"></li>
+				</ul>
+			</div>
+			<a class="prev" href="#" @click.prevent="prevSlide">&#x25C0;</a>
+			<a class="next" href="#" @click.prevent="nextSlide">&#x25B6;</a>
+
+		</div>
+
 	<div class="indicators">
 				<i class="fa fa-angle-left arrow-prev"></i>
 				<div class="svg">
@@ -423,7 +439,7 @@
 						Добро пожаловать в «Evostone»!
 					</p>
 					<p class="paragraph">
-						Добро пожаловать в <span>«Evostone»<span>!
+						Добро пожаловать в <span>«Evostone»</span>!
 					</p>
 
 				</div>
@@ -451,7 +467,7 @@
 						<div class="eye"></div>
 					</div>
 				</div>
-				<div class="col-12 col-md-3 content-item"">
+				<div class="col-12 col-md-3 content-item">
 					<div class="image-block">
 						<img src="images/our-job-2.png" alt="">
 						<a href="#" class="dark-bg">
@@ -463,7 +479,7 @@
 						<div class="eye"></div>
 					</div>
 				</div>
-				<div class="col-12 col-md-3 content-item"">
+				<div class="col-12 col-md-3 content-item">
 					<div class="image-block">
 						<img src="images/our-job-3.png" alt="">
 						<a href="#" class="dark-bg">
@@ -475,7 +491,7 @@
 						<div class="eye"></div>
 					</div>
 				</div>
-				<div class="col-12 col-md-3 content-item"">
+				<div class="col-12 col-md-3 content-item">
 					<div class="image-block">
 						<img src="images/our-job-4.png" alt="">
 						<a href="#" class="dark-bg">
@@ -626,6 +642,8 @@
 			</div>
 		</div>
 	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="script/mainScript.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>

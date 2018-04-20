@@ -2,20 +2,16 @@ new Vue({
     el: '#carusel',
     data:{
         slides: [
-            /*'./images/karusel/1.png',
+            './images/karusel/1.png',
             './images/karusel/2.png',
             './images/karusel/3.png',
             './images/karusel/4.png',
-            './images/karusel/5.png',*/
-            'https://lorempixel.com/800/400/food/1',
-            'https://lorempixel.com/800/400/food/2',
-            'https://lorempixel.com/800/400/food/3',
-            'https://lorempixel.com/800/400/food/4',
-            'https://lorempixel.com/800/400/food/5',
+            './images/karusel/5.png'
+
         ],
         current: 0,
         width: 795,
-        timer: 0,
+        timer: 0
     },
     methods: {
         nextSlide: function () {

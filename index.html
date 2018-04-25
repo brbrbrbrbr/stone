@@ -13,7 +13,43 @@
 </head>
 <body>
 
-	<header>
+	<header id="header">
+		 <div class="popup-form-block" v-show="vsb_modal">
+		    <div class="container">
+		        <div class="row justify-content-center align-items-center">
+		            <div class="col-10 col-sm-8 col-lg-5 form-block">
+		                <h3 class="title-advertising">Заполните форму </h3>
+		                <p class="text">и мы вам перезвоним в течении 15 минут.</p>
+		                <div class="line-underline-red"></div>
+		                
+		                <form action="#">
+		                    <div class="row">
+		                    <label class="placeinput col-6 col-md-6">
+		                        <input type="text" class="name" @focus.once="hide_vsb_placeholder('name')">
+		                        <div class="place-holder" v-if="placeholder_vsb['name']">Ваше Имя <span>*</span></div>
+		                    </label>
+		                    <label class="placeinput col-6 col-md-6">
+		                        <input type="text" class="phone" @focus.once="hide_vsb_placeholder('phone')">
+		                        <div class="place-holder" v-if="placeholder_vsb['phone']">Номер телефона <span>*</span></div>
+		                    </label>
+		                    <div class="col-md-12">
+		                        <textarea class="area" name="" id=""  placeholder="Текст сообщения"></textarea>
+		                    </div>
+		                    <div class="col-md-12 btn-container">
+		                        
+		                    
+		                        <button class="btn-orange">отправить</button>
+		                    </div>
+		                    </div>
+		                </form>
+		                <div class="close" @click="toggle_vsb_modal">&times;</div>
+		            </div>      
+		        </div>
+		    </div>
+		</div>  
+
+
+
 		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="4000">
 			
 		  <div class="carousel-inner" role="listbox">
@@ -34,7 +70,7 @@
 						<li class="features-item">Изготовление на современном оборудовании</li>
 						<li class="features-item">Гарантия - 24 месяца</li>
 					</ul>
-					<button class="btn-orange btn-open">связаться с нами</button>
+					<button class="btn-orange btn-open" @click="toggle_vsb_modal">связаться с нами</button>
 
 				</div>
 		    </div>
@@ -54,7 +90,7 @@
 						<li class="features-item">Изготовление на современном оборудовании</li>
 						<li class="features-item">Гарантия - 24 месяца</li>
 					</ul>
-					<button class="btn-orange btn-open">связаться с нами</button>
+					<button class="btn-orange btn-open" @click="toggle_vsb_modal">связаться с нами</button>
 
 				</div>
 		    </div>
@@ -74,7 +110,7 @@
 						<li class="features-item">Изготовление на современном оборудовании</li>
 						<li class="features-item">Гарантия - 24 месяца</li>
 					</ul>
-					<button class="btn-orange btn-open">связаться с нами</button>
+					<button class="btn-orange btn-open" @click="toggle_vsb_modal">связаться с нами</button>
 
 				</div>
 		    </div>
@@ -94,7 +130,7 @@
 						<li class="features-item">Изготовление на современном оборудовании</li>
 						<li class="features-item">Гарантия - 24 месяца</li>
 					</ul>
-					<button class="btn-orange btn-open">связаться с нами</button>
+					<button class="btn-orange btn-open" @click="toggle_vsb_modal">связаться с нами</button>
 
 				</div>
 		    </div>
@@ -114,7 +150,7 @@
 						<li class="features-item">Изготовление на современном оборудовании</li>
 						<li class="features-item">Гарантия - 24 месяца</li>
 					</ul>
-					<button class="btn-orange btn-open">связаться с нами</button>
+					<button class="btn-orange btn-open" @click="toggle_vsb_modal">связаться с нами</button>
 
 				</div>
 		    </div>
@@ -786,40 +822,11 @@
 		</div>
 	</footer>
 	
-		<div class="popup-form-block d-none">
-			<div class="container">
-				<div class="row justify-content-center align-items-center">
-					<div class="col-10 col-sm-8 col-lg-5 form-block">
-						<h3 class="title-advertising">Заполните форму </h3>
-						<p class="text">и мы вам перезвоним в течении 15 минут.</p>
-						<div class="line-underline-red"></div>
-						
-						<form action="#">
-							<div class="row">
-							<label class="placeinput col-6 col-md-6">
-							    <input type="text" class="name" placeholder="">
-							    <div class="place-holder">Ваше Имя <span>*</span></div>
-							</label>
-							<label class="placeinput col-6 col-md-6">
-							    <input type="text" class="phone" placeholder="">
-							    <div class="place-holder">Номер телефона <span>*</span></div>
-							</label>
-							<div class="col-md-12">
-								<textarea class="area " name="" id=""  placeholder="Текст сообщения"></textarea>
-							</div>
-							<div class="col-md-12 btn-container">
-								
-							
-								<button class="btn-orange">отправить</button>
-							</div>
-							</div>
-						</form>
-						<div class="close">&times;</div>
-					</div>		
-				</div>
-			</div>
-		</div>		
 	
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<script src="script/mainScript.js"></script>
+
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
